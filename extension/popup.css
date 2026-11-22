@@ -1,0 +1,152 @@
+html {
+    min-width: 226px;
+}
+body {
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 226px;
+    margin: 0;
+    padding: 10px 5px;
+}
+.hidden {
+    display: none;
+}
+.prc-short-message {
+    font-size: 14px;
+    color: #cf3839;
+    padding-top: 15px;
+    text-align: center;
+}
+.prc-top-controls:after {
+    display: block;
+    content: " ";
+    clear: both;
+    margin-bottom: 5px;
+}
+
+.prc-top-controls .col-3 button {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.col-3 {
+    float: left;
+    width: 30%;
+    margin: 0 1.67%;
+}
+
+
+.prc-top-controls-rate {
+    text-align: center;
+    line-height: 0.95em;
+    padding-top: 37px;
+    color: #467DB3;
+}
+.prc-control-btn {
+    padding: 3px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+    background: #eee;
+}
+.prc-control-btn:focus-visible {
+    outline: 2px solid #467DB3;
+    outline-offset: 2px;
+}
+.prc-control-faster-slower-btn {
+    height: 30px;
+    width: 100%;
+    max-width: 60px;
+    font-size: 24px;
+    line-height: 1em;
+    font-weight: bold;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.4),1px 1px 2px rgba(0,0,0,0.2);
+    color: white;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+.prc-control-faster-slower-btn > span{
+    position: relative;
+    top: -2px;
+}
+#prc-slower {
+    background: #B1E613;
+    border-color: #8EAC27;
+}
+#prc-faster {
+    background: #F14545;
+    border-color: #B5191D;
+}
+#prc-slower10x {
+    background: linear-gradient(to bottom, #B1E613 0%, #7CBC08 100%);
+    border-color: #8EAC27;
+}
+#prc-faster10x {
+    background: linear-gradient(to bottom, #F14545 0%, #CE1B23 100%);
+    border-color: #B5191D;
+}
+.prc-control-rate {
+    display: inline-block;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+}
+.prc-control-rate-label {
+    font-size: 9px;
+}
+
+.prc-speed-label {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 4px;
+}
+
+.prc-control-slower-label {
+    color: #7CBC08;
+}
+
+.prc-control-faster-label {
+    color: #CE1B23;
+}
+
+
+.prc-extra-controls-top {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+    padding: 10px 0;
+}
+.prc-extra-controls-slow, .prc-extra-controls-fast {
+    display: grid;
+    gap: 4px;
+}
+.prc-control-rate-btn {
+    border-radius: 3px;
+    font-size: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    color: #999;
+    font-weight: bold;
+    transition: background .5s, color .5s;
+}
+.prc-control-rate-btn:hover {
+    color:#333;
+    background-color: #f5f5f5;
+}
+#prc-rate-1 {
+    padding: 0 5px;
+    font-size: 13px;
+}
+.prc-extra-controls-top .prc-control-rate-btn {
+    padding: 0 5px;
+    min-height: 24px;
+}
+#prc-rate-10x {
+    color: white;
+    padding: 15px 5px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    background: #123557;
+}
+

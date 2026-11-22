@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Media Playback Speed</title>
+    <link rel="stylesheet" href="popup.css">
+
+    <script src="content_main.js"></script>
+    <script src="popup.js"></script>
+</head>
+<body>
+    <div id="prc-popup-no-content">
+        <div class="prc-short-message">
+            
+            <div>No audio/video content found on this page.</div>
+        </div>
+    </div>
+
+    <div id="prc-popup-content" class="hidden">
+        <div class="prc-top-controls">
+            <div class="col-3">
+                <button id="prc-slower" data-step="-0.1" aria-label="Decrease speed by 0.1x" class="prc-control-btn prc-control-faster-slower-btn"><span>&lsaquo;</span></button>
+                <div class="prc-speed-label">
+                    <span class="prc-control-slower-label">-</span>
+                </div>
+                <button id="prc-slower10x" data-step="-1" aria-label="Decrease speed by 1x" class="prc-control-btn prc-control-faster-slower-btn"><span>&laquo;</span></button>
+            </div>  
+            <div class="prc-top-controls-rate col-3">
+                <span id="prc-rate" class="prc-control-rate"></span><br>
+                <span class="prc-control-rate-label">Playback Rate</span>
+            </div>
+            <div class="col-3">
+                <button id="prc-faster" data-step="0.1" aria-label="Increase speed by 0.1x" class="prc-control-btn prc-control-faster-slower-btn" autofocus><span>&rsaquo;</span></button>
+                <div class="prc-speed-label">
+                    <span class="prc-control-faster-label">+</span>
+                </div>
+                <button id="prc-faster10x" data-step="1" aria-label="Increase speed by 1x" class="prc-control-btn prc-control-faster-slower-btn"><span>&raquo;</span></button>
+            </div>
+        </div>
+
+        <div class="prc-extra-controls">
+            <div class="prc-extra-controls-top">
+                <div class="prc-extra-controls-slow">
+                    <button id="prc-rate-05" data-rate="0.5" class="prc-control-btn prc-control-rate-btn">0.5x</button>
+                    <button id="prc-rate-065" data-rate="0.65" class="prc-control-btn prc-control-rate-btn">0.65x</button>
+                    <button id="prc-rate-08" data-rate="0.8" class="prc-control-btn prc-control-rate-btn">0.8x</button>
+                </div>
+                <button id="prc-rate-1" data-rate="1.0" class="prc-control-btn prc-control-rate-btn">1.0x</button>
+                <div class="prc-extra-controls-fast">
+                    <button id="prc-rate-15" data-rate="1.5" class="prc-control-btn prc-control-rate-btn">1.5x</button>
+                    <button id="prc-rate-17" data-rate="1.7" class="prc-control-btn prc-control-rate-btn">1.7x</button>
+                    <button id="prc-rate-2" data-rate="2.0" class="prc-control-btn prc-control-rate-btn">2.0x</button>
+                </div>
+            </div>
+            <button id="prc-rate-10x" data-rate="10.0" class="prc-control-btn prc-control-rate-btn"> 10.0x </button>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,56 @@
+{
+  "description": "Adjust audio and video speed with presets or shortcuts and see the current speed on the toolbar.",
+  "icons": {
+    "128": "icon-128x128.png",
+    "16": "icon-16x16.png",
+    "48": "icon-48x48.png"
+  },
+  "manifest_version": 3,
+  "name": "Media Playback Speed",
+  "permissions": [
+    "scripting"
+  ],
+  "content_security_policy": {
+    "extension_pages": "default-src 'self'; script-src 'self'; object-src 'none'; connect-src 'self'"
+  },
+  "short_name": "Media Speed",
+  "version": "1.0.0",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "file:///*"],
+      "js": ["rate_monitor.js"],
+      "all_frames": true
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "slower": {
+      "suggested_key": { "default": "Alt+Shift+Left" },
+      "description": "Decrease playback speed by 0.1x"
+    },
+    "faster": {
+      "suggested_key": { "default": "Alt+Shift+Right" },
+      "description": "Increase playback speed by 0.1x"
+    },
+    "slower-large": {
+      "suggested_key": { "default": "Alt+Shift+Down" },
+      "description": "Decrease playback speed by 1x"
+    },
+    "faster-large": {
+      "suggested_key": { "default": "Alt+Shift+Up" },
+      "description": "Increase playback speed by 1x"
+    }
+  },
+  "action": {
+    "default_icon": "icon-48x48.png",
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "file:///*"
+  ]
+}
+
