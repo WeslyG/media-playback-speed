@@ -48,6 +48,8 @@ function readOrSetMediaRate(rate, useTrackedMedia) {
     } : null;
 }
 
+// Called by the popup and by the service worker through importScripts().
+// oxlint-disable-next-line no-unused-vars
 async function getOrSetTabMediaRate(tabId, rate = null, useTrackedMedia = false) {
     const frames = await chrome.scripting.executeScript({
         target: { tabId, allFrames: true },
@@ -63,6 +65,8 @@ async function getOrSetTabMediaRate(tabId, rate = null, useTrackedMedia = false)
     return media?.result.rate;
 }
 
+// Shared by the popup buttons and keyboard commands.
+// oxlint-disable-next-line no-unused-vars
 function stepMediaRate(rate, step) {
     return Math.max(0.1, Math.min(100, Math.round((rate + step) * 100) / 100));
 }

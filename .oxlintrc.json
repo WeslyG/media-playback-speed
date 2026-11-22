@@ -1,0 +1,14 @@
+{
+  "env": {
+    "browser": true,
+    "serviceworker": true
+  },
+  "globals": {
+    "chrome": "readonly",
+    "getOrSetTabMediaRate": "readonly",
+    "stepMediaRate": "readonly"
+  },
+  "categories": {
+    "correctness": "error"
+  }
+}

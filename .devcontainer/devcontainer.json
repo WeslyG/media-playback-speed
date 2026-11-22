@@ -1,0 +1,5 @@
+{
+  "name": "Media Playback Speed",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y zip && npm ci"
+}

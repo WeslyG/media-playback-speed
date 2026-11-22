@@ -11,11 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
       - name: Build ZIP
-        shell: pwsh
+        shell: bash
         run: |
-          $version = if ($env:GITHUB_REF_TYPE -eq 'tag') { $env:GITHUB_REF_NAME.Substring(1) }
-          ./scripts/build.ps1 -Version $version
+          if [[ "$GITHUB_REF_TYPE" == tag ]]; then
+            npm run build -- "${GITHUB_REF_NAME#v}"
+          else
+            npm run build
+          fi
       - uses: actions/upload-artifact@v4
         with:
           name: extension
