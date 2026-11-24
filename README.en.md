@@ -8,6 +8,8 @@ A Chromium browser extension for changing HTML5 video and audio playback speed i
 
 ## Installation
 
+[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/media-playback-speed/nogakpkmohhjejmlaeneehgchaghpbbn)
+
 Download the ZIP from [GitHub Releases](https://github.com/WeslyG/media-playback-speed/releases), extract it, and load the folder containing `manifest.json` with **Load unpacked** in developer mode at `chrome://extensions`.
 
 ## Controls

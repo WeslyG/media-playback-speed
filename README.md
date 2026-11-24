@@ -8,6 +8,8 @@
 
 ## Установка
 
+[Установить из Chrome Web Store](https://chromewebstore.google.com/detail/media-playback-speed/nogakpkmohhjejmlaeneehgchaghpbbn)
+
 Скачайте ZIP из [релизов GitHub](https://github.com/WeslyG/media-playback-speed/releases), распакуйте его и загрузите папку с `manifest.json` через **Загрузить распакованное расширение** в режиме разработчика на странице `chrome://extensions`.
 
 ## Управление
